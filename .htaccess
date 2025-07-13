@@ -1,0 +1,3 @@
+# Deny direct access to includes folder
+RewriteEngine On
+RewriteRule ^includes/ - [F,L]

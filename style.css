@@ -1,0 +1,293 @@
+/* project-root/style.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure body takes at least full viewport height */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+    margin-bottom: 20px; /* Space below header */
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex; /* Use flexbox for navigation items */
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    margin: 0;
+}
+
+header li {
+    padding: 0 15px; /* Adjust padding for list items */
+}
+
+header #branding {
+    float: left; /* Keep branding on the left */
+}
+
+header #branding h1 {
+    margin: 0;
+    font-size: 24px;
+}
+header #branding a {
+    text-transform: none;
+}
+
+header nav {
+    /* float: right; /* Not needed with flexbox on ul */
+    margin-top: 10px;
+}
+header nav ul {
+    display: flex;
+}
+header nav li {
+    padding-left: 20px;
+}
+
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1; /* Allows content area to take available space */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 16px;
+}
+.form-group input[type="file"] {
+    padding: 5px 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #007bff; /* Primary blue */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Space between buttons */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary { background: #007bff; }
+.btn-primary:hover { background: #0056b3; }
+.btn-success { background: #28a745; }
+.btn-success:hover { background: #218838; }
+.btn-danger { background: #dc3545; }
+.btn-danger:hover { background: #c82333; }
+.btn-warning { background: #ffc107; color: #333; } /* Added text color for warning */
+.btn-warning:hover { background: #e0a800; }
+.btn-info { background: #17a2b8; }
+.btn-info:hover { background: #138496; }
+.btn-sm {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+/* Alerts/Messages */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* For rounded corners */
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #555;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td a {
+    margin-right: 5px;
+}
+
+/* Topic Card for Students */
+.topic-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.topic-card h4 {
+    margin-top: 0;
+    color: #007bff;
+}
+.topic-card p {
+    margin-bottom: 8px;
+}
+.topic-card small {
+    color: #777;
+    font-size: 0.85em;
+}
+
+/* Video Container (Student View Topic) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Questions Section (Student View Topic) */
+.questions-section {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+.question-item {
+    background: #fdfdfd;
+    border: 1px solid #e9e9e9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.question-item strong {
+    color: #444;
+}
+.question-item .reply {
+    margin-top: 15px;
+    padding: 12px 15px;
+    background: #e6f2ff; /* Light blue */
+    border-left: 4px solid #007bff;
+    font-style: italic;
+    border-radius: 5px;
+}
+.question-item .reply p {
+    margin: 0;
+}
+
+/* Footer (optional, but good for consistent layout) */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9em;
+    border-top: #77aaff 3px solid;
+}
